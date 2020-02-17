@@ -173,4 +173,12 @@ public class BankTellerTest {
         assertThrows(IllegalArgumentException.class, ()->bankAccount.transfer("d@j.com", "e@f.com", 0));
         assertThrows(InsufficientFundsException.class, ()->bankAccount.transfer("z@y.com", "c@d.com", 938.84));
     }
+
+    public static ATM testATM(){
+        CustomerCollection c1 = new CustomerCollection();
+        c1.addCustomer("bob", "password");
+        c1.createAccount("bob", 200);
+        c1.addCustomer("12345", "pw2");
+        c1.createAccount("12345", 1000);
+    }
 }
